@@ -1,16 +1,110 @@
-# React + Vite
+# Список задач
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-приложение для отображения и управления списком задач, разработанное в рамках практических работ по дисциплине «Верстка и создание приложений».
 
-Currently, two official plugins are available:
+## Онлайн-версия приложения
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект опубликован на GitHub Pages:
 
-## React Compiler
+https://pickalini.github.io/task-app-komarova/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Функциональные возможности
 
-## Expanding the ESLint configuration
+- загрузка списка задач из внешнего API;
+- добавление новых задач;
+- удаление задач;
+- переход между страницами приложения;
+- отображение состояния загрузки данных;
+- отображение сообщения при ошибке получения данных;
+- работа приложения в production-режиме.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Страницы приложения
+
+- главная страница со списком задач;
+- страница «О приложении»;
+- страница «Обо мне».
+
+## Используемые технологии
+
+- React;
+- Vite;
+- React Router;
+- JavaScript;
+- CSS;
+- GitHub Pages.
+
+## Используемый API
+
+Для получения списка задач используется сервис JSONPlaceholder:
+
+https://jsonplaceholder.typicode.com/todos?_limit=10
+
+## Структура проекта
+
+```text
+task-app
+├── public
+├── src
+│   ├── components
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── TaskForm.jsx
+│   │   └── TaskList.jsx
+│   ├── pages
+│   │   ├── AboutPage.jsx
+│   │   ├── ProfilePage.jsx
+│   │   └── TasksPage.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Локальный запуск проекта
+
+Для установки зависимостей:
+
+```bash
+npm install
+```
+
+Для запуска приложения в режиме разработки:
+
+```bash
+npm run dev
+```
+
+## Production-сборка
+
+Для создания production-сборки:
+
+```bash
+npm run build
+```
+
+После выполнения команды создаётся папка `dist` с готовой версией приложения.
+
+Для локальной проверки production-версии:
+
+```bash
+npm run preview
+```
+
+## Публикация проекта
+
+Для публикации приложения на GitHub Pages используется команда:
+
+```bash
+npm run deploy
+```
+
+## Маршрутизация
+
+В проекте используется `HashRouter`, благодаря чему страницы «О приложении» и «Обо мне» корректно открываются после публикации приложения на GitHub Pages.
+
+## Вывод
+
+В ходе выполнения практической работы была выполнена production-сборка React-приложения, проверена его работа в режиме preview и выполнена публикация на GitHub Pages. Итоговое SPA-приложение доступно онлайн и готово к демонстрации.
